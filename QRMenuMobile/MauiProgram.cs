@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using QRMenuMobile.DataServices;
 
 namespace QRMenuMobile
 {
@@ -18,6 +19,9 @@ namespace QRMenuMobile
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddSingleton<IRestDataServices, RestDataServices>();
+
+            builder.Services.AddSingleton<MainPage>();
 
             return builder.Build();
         }

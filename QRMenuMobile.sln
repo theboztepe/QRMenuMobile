@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRMenuMobile", "QRMenuMobile\QRMenuMobile.csproj", "{1C202B0E-C12C-4434-9CFB-A5F7CF61F23F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C202B0E-C12C-4434-9CFB-A5F7CF61F23F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C202B0E-C12C-4434-9CFB-A5F7CF61F23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C202B0E-C12C-4434-9CFB-A5F7CF61F23F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1C202B0E-C12C-4434-9CFB-A5F7CF61F23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C202B0E-C12C-4434-9CFB-A5F7CF61F23F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C202B0E-C12C-4434-9CFB-A5F7CF61F23F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9C8D404-2B46-47AA-963A-EDC264D1ECC2}
+	EndGlobalSection
+EndGlobal

@@ -1,24 +1,37 @@
-﻿namespace QRMenuMobile
+﻿using QRMenuMobile.DataServices;
+using QRMenuMobile.Models;
+
+namespace QRMenuMobile
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
-        public MainPage()
+        private readonly IRestDataServices _restDataServices;
+        public MainPage(IRestDataServices restDataServices)
         {
             InitializeComponent();
+
+            _restDataServices = restDataServices;
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        protected async override void OnAppearing()
         {
-            count++;
+            base.OnAppearing();
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
+            string QRCode = "186DEAFD6C274C789A1F2A7D80B532A3";
+            var QRMenu = await _restDataServices.GetQRMenu(QRCode);
+            if (QRMenu.Success)
+            {
+                collectionView.ItemsSource = QRMenu.Data.Root;
+            }
             else
-                CounterBtn.Text = $"Clicked {count} times";
+            {
+                collectionView.ItemsSource = new List<Root>();
+            }
+        }
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 
